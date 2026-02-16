@@ -1,5 +1,6 @@
-import { Grid } from "@vaadin/grid";
-import { GridColumn } from "@vaadin/grid/src/vaadin-grid-column";
+import { Grid as VaadinGrid } from "@vaadin/grid";
+import { customElement } from "lit/decorators.js";
 
-window.customElements.define('dragnet-grid', Grid);
-window.customElements.define('dragnet-grid-column', GridColumn);
+@customElement("dragnet-grid")
+export class Grid extends VaadinGrid {
+}
