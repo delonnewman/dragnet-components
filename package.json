@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@vaadin/grid": "^25.0.4"
+    "@vaadin/grid": "^25.0.4",
+    "lit": "^3.3.2"
   },
   "name": "dragnet-components",
   "module": "index.ts",
