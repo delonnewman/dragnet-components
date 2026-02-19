@@ -1,14 +1,3 @@
-var __legacyDecorateClassTS = function(decorators, target, key, desc) {
-  var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-    r = Reflect.decorate(decorators, target, key, desc);
-  else
-    for (var i = decorators.length - 1;i >= 0; i--)
-      if (d = decorators[i])
-        r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
 // node_modules/@lit/reactive-element/development/css-tag.js
 var NODE_MODE = false;
 var global = globalThis;
@@ -10306,55 +10295,8 @@ class Grid extends GridMixin(ElementMixin(ThemableMixin(PolylitMixin(LumoInjecti
   }
 }
 defineCustomElement(Grid);
-// node_modules/@lit/reactive-element/development/decorators/custom-element.js
-var customElement = (tagName) => (classOrTarget, context) => {
-  if (context !== undefined) {
-    context.addInitializer(() => {
-      customElements.define(tagName, classOrTarget);
-    });
-  } else {
-    customElements.define(tagName, classOrTarget);
-  }
-};
-// node_modules/@lit/reactive-element/development/decorators/property.js
-var DEV_MODE4 = true;
-var issueWarning5;
-if (DEV_MODE4) {
-  globalThis.litIssuedWarnings ??= new Set;
-  issueWarning5 = (code, warning) => {
-    warning += ` See https://lit.dev/msg/${code} for more information.`;
-    if (!globalThis.litIssuedWarnings.has(warning) && !globalThis.litIssuedWarnings.has(code)) {
-      console.warn(warning);
-      globalThis.litIssuedWarnings.add(warning);
-    }
-  };
-}
-// node_modules/@lit/reactive-element/development/decorators/query.js
-var DEV_MODE5 = true;
-var issueWarning6;
-if (DEV_MODE5) {
-  globalThis.litIssuedWarnings ??= new Set;
-  issueWarning6 = (code, warning) => {
-    warning += code ? ` See https://lit.dev/msg/${code} for more information.` : "";
-    if (!globalThis.litIssuedWarnings.has(warning) && !globalThis.litIssuedWarnings.has(code)) {
-      console.warn(warning);
-      globalThis.litIssuedWarnings.add(warning);
-    }
-  };
-}
-// src/dragnet/grid.ts
-class Grid2 extends Grid {
-}
-Grid2 = __legacyDecorateClassTS([
-  customElement("dragnet-grid")
-], Grid2);
-// src/dragnet/grid-column.ts
-class GridColumn2 extends GridColumn {
-}
-GridColumn2 = __legacyDecorateClassTS([
-  customElement("dragnet-grid-column")
-], GridColumn2);
 export {
-  GridColumn2 as GridColumn,
-  Grid2 as Grid
+  GridColumn,
+  Grid,
+  ColumnBaseMixin
 };

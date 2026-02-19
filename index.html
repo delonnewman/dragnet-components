@@ -9,12 +9,12 @@
     <script type="module" src="build/dragnet-components.js"></script>
 </head>
 <body>
-    <dragnet-grid>
-        <dragnet-grid-column header="Name" path="name"></dragnet-grid-column>
-        <dragnet-grid-column header="Likes" path="likes"></dragnet-grid-column>
-    </dragnet-grid>
+    <vaadin-grid>
+        <vaadin-grid-column header="Name" path="name"></vaadin-grid-column>
+        <vaadin-grid-column header="Likes" path="likes"></vaadin-grid-column>
+    </vaadin-grid>
     <script>
-     const grid = document.querySelector('dragnet-grid');
+     const grid = document.querySelector('vaadin-grid');
      grid.items = [
          { name: "Jackie", likes: "Blu" },
          { name: "Delon", likes: "Jackie" },
